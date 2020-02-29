@@ -2,7 +2,8 @@ FROM devkitpro/devkitarm
 
 MAINTAINER laqieer <laqieer@126.com>
 
-RUN git clone https://github.com/pret/agbcc.git && \
+RUN apt-get update && apt-get install -y gcc && \
+    git clone https://github.com/pret/agbcc.git && \
     cd agbcc/ && ./build.sh && \
     ./install.sh /usr/local/bin && \
     cd ../ && rm -rf agbcc/ && \
