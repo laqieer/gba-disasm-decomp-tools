@@ -13,4 +13,4 @@ RUN cp -rf tools/ /usr/local/bin
 RUN cd ../ && rm -rf pokeemerald/
 
 ENV PATH=/usr/local/bin/tools/agbcc/bin:$PATH
-ENV PATH=$PATH$( find /usr/local/bin/tools/ -type d -printf ":%p" )
+ENV PATH=$PATH\$( find /usr/local/bin/tools/ -type d -printf ":%p" )
