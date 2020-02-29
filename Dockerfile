@@ -1,4 +1,4 @@
-FROM gcc:latest
+FROM devkitpro/devkitarm
 
 MAINTAINER laqieer <laqieer@126.com>
 
