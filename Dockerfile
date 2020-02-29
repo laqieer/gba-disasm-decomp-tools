@@ -12,16 +12,16 @@ RUN cd pokeemerald/ && make tools
 RUN cp -rf tools/ /usr/local/bin
 RUN cd ../ && rm -rf pokeemerald/
 
-ENV PATH=/usr/local/bin/tools/agbcc/bin:\
-  /usr/local/bin/tools/aif2pcm:\
-  /usr/local/bin/tools/bin2c:\
-  /usr/local/bin/tools/gbafix:\
-  /usr/local/bin/tools/gbagfx:\
-  /usr/local/bin/tools/jsonproc:\
-  /usr/local/bin/tools/mapjson:\
-  /usr/local/bin/tools/mid2agb:\
-  /usr/local/bin/tools/preproc:\
-  /usr/local/bin/tools/ramscrgen:\
-  /usr/local/bin/tools/rsfont:\
-  /usr/local/bin/tools/scaninc:\
+ENV PATH=/usr/local/bin/tools/agbcc/bin: \
+  /usr/local/bin/tools/aif2pcm: \
+  /usr/local/bin/tools/bin2c: \
+  /usr/local/bin/tools/gbafix: \
+  /usr/local/bin/tools/gbagfx: \
+  /usr/local/bin/tools/jsonproc: \
+  /usr/local/bin/tools/mapjson: \
+  /usr/local/bin/tools/mid2agb: \
+  /usr/local/bin/tools/preproc: \
+  /usr/local/bin/tools/ramscrgen: \
+  /usr/local/bin/tools/rsfont: \
+  /usr/local/bin/tools/scaninc: \
   $PATH
