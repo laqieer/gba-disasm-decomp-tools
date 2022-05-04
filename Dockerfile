@@ -21,3 +21,5 @@ MAINTAINER laqieer <laqieer@126.com>
 COPY --from=installer ["/tools/*", "/usr/local/bin/"]
 
 ENV PATH=/usr/local/bin/agbcc/bin:$PATH
+
+RUN pacman --noconfirm -S libpng

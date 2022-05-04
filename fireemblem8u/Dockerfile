@@ -23,3 +23,5 @@ COPY --from=installer ["/tools/*", "/usr/local/bin/"]
 ENV PATH=/usr/local/bin/agbcc/bin:$DEVKITARM/bin:$PATH
 ENV C_INCLUDE_PATH=/usr/local/bin/agbcc/include:$C_INCLUDE_PATH
 ENV LIBRARY_PATH=/usr/local/bin/agbcc/lib:$LIBRARY_PATH
+
+RUN apt-get update && apt-get install -y libpng-dev
