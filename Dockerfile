@@ -1,13 +1,10 @@
-FROM hiberglobal/gcc-arm-none-eabi AS installer
+FROM frolvlad/alpine-glibc:latest AS installer
 
 ARG PROJECT=pokeemerald
 ARG USERNAME=pret
 ARG BUILD_TOOLS=make\ tools
 
 RUN mkdir -p /tools && \
-    apk update && \
-    apk add --upgrade apk-tools && \
-    apk upgrade --available && \
     apk add git bash build-base libpng-dev && \
     git clone https://github.com/$USERNAME/$PROJECT.git && \
     cd $PROJECT && $BUILD_TOOLS && \
