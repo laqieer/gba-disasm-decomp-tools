@@ -18,8 +18,13 @@ docker pull laqieer/gba-disasm-decomp-tools
 Example:
 
 ```
-docker build -t laqieer/gba-disasm-decomp-tools:fireemblem8u --build-arg USERNAME=FireEmblemUniverse --build-arg PROJECT=fireemblem8u --build-arg BUILD_TOOLS=./build_tools.sh .
+docker build -t laqieer/gba-disasm-decomp-tools:fireemblem8u --build-arg USERNAME=laqieer --build-arg PROJECT=fireemblem8u --build-arg BUILD_TOOLS=./build_tools.sh .
 ```
+
+The `:fireemblem8u` tag is also built and published automatically by the
+`Docker` workflow (`.github/workflows/docker-publish.yml`). It is built from the
+`laqieer` fork because its `master` carries the `preproc` tool and `gbagfx`
+`-mindist` support that upstream `FireEmblemUniverse` does not yet have.
 
 ## Usage
 
